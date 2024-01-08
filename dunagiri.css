@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif, sans-serif;
+
+}
+
+nav{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 30px 200px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: inherit;
+    height: inherit;
+    margin-left: 1px;
+    margin-right: 2px;
+    padding: 25px 25px;
+    padding-left: 2%;
+    padding-right: 10%;
+    
+    
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+    position: relative;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    
+}
+
+  
+nav ul li a::after {
+    content: '';
+    height: 4px;
+    width: 100%;
+    background: #014235;
+    position: absolute;
+    left: 0;
+    top: -8px;
+    opacity: 0;
+    transition: all 0.2s;
+
+  }
+
+nav ul li a:hover::after{
+    opacity: 1;
+}
+
+
+  
+  
+
+.box video{
+    width: 1519px;
+    height: 622px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#card-transparent{
+  position: absolute;
+  width: 800px;
+  /* max-width: 600px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 399px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.content{
+    text-align: center;
+}
+
+.content span{
+    font-size: 56px;
+    font-family: serif;
+    color: black;
+    letter-spacing: normal;
+    line-height: normal;
+}
+
+.content p{
+    font-size: 23px;
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    line-height: 1.8em;
+    padding: 20px 30px;
+    vertical-align: baseline;
+    text-align: center;
+    color: #000;
+}
+
+.btn-inquire{
+    background-color: #014235;
+    padding: 15px 35px;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: inherit;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+.btn-inquire:hover{
+    background-color: #fff;
+    color: #014235;
+    border: 1px solid #014235;
+}
+
+.container{
+    padding: 2rem;
+}
+
+.slideshow-container{
+    position:relative;
+    height: 60px;
+    max-width: 50rem;
+}
+
+.mySlides {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 50px 100px;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active, .dot:hover {
+    background-color: #121111;
+    cursor: pointer;
+  }
+
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  .container .slideshow-container .mySlides .text{
+    align-items: flex-start;
+  }
+
+.container-para{
+    margin: 5% 20%;
+    font-size: 16px;
+    font-style: normal;
+}
+
+.container-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  height: 100vh;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.container-grid div {
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.item1 { grid-area: 1 / 1 / 2 / 2; }
+.item2 { grid-area: 1 / 2 / 2 / 6; }
